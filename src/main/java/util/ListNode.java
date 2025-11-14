@@ -16,7 +16,7 @@ public class ListNode {
      * input: int array like [6,2,7,9]
      * output: ListNode head 6
      * */
-    public ListNode getList(int[] arr) {
+    public static ListNode getList(int[] arr) {
         ListNode head = new ListNode(0);
         ListNode curr = head;
         for (int j : arr) {
@@ -33,7 +33,23 @@ public class ListNode {
             sb.append(" ");
             head = head.next;
         }
-        System.out.print(sb.toString());
+        System.out.print(sb);
+    }
+
+    public static boolean compareLinkedList(ListNode l1, ListNode l2) {
+
+        if(l1==null && l2==null) {
+            return true;
+        }
+
+        while(l1!=null && l2!=null) {
+            if(l1.val!=l2.val) {
+                return false;
+            }
+            l1 = l1.next;
+            l2 = l2.next;
+        }
+        return true;
     }
 
     public List<Integer> getNodeValueList(ListNode head) {
