@@ -7,7 +7,7 @@ import java.util.PriorityQueue;
 
 import static java.util.Comparator.*;
 
-public class P022MergeKSortedLists {
+public class P023MergeKSortedLists {
     public ListNode mergeKLists(ListNode[] lists) {
         ListNode head = new ListNode(0);
 

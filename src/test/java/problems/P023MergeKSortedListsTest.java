@@ -9,11 +9,11 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class P022MergeKSortedListsTest {
+class P023MergeKSortedListsTest {
     @ParameterizedTest
     @MethodSource("mergeKSortedListsTestCases")
     void mergeKSortedListsTest(ListNode[] lists, ListNode expected) {
-        P022MergeKSortedLists obj = new P022MergeKSortedLists();
+        P023MergeKSortedLists obj = new P023MergeKSortedLists();
         assertTrue(ListNode.compareLinkedList(obj.mergeKLists(lists), expected));
     }
     private static Stream<Arguments> mergeKSortedListsTestCases() {
